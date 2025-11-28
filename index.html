@@ -3,39 +3,89 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Bootstrap Portoflio</title>
+    <meta
+      name="description"
+      content="Ahmed Alaa - Front-End Developer & AI Enthusiast. Computer & Communication Engineering Student at Alexandria University. Specialized in React, Next.js, and Deep Learning."
+    />
+    <meta
+      name="keywords"
+      content="Front-End Developer, Web Developer, React Developer, AI Enthusiast, Portfolio, Ahmed Alaa"
+    />
+    <meta name="author" content="Ahmed Alaa" />
+    <meta name="theme-color" content="#0078FF" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Ahmed Alaa - Front-End Developer & AI Enthusiast"
+    />
+    <meta
+      property="og:description"
+      content="Computer & Communication Engineering Student specializing in Front-End Development and AI"
+    />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:title"
+      content="Ahmed Alaa - Front-End Developer & AI Enthusiast"
+    />
+    <meta
+      property="twitter:description"
+      content="Computer & Communication Engineering Student specializing in Front-End Development and AI"
+    />
+
+    <title>Ahmed Alaa - Front-End Developer & AI Enthusiast | Portfolio</title>
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💻</text></svg>"
+    />
+
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="css/all.min.css" />
+
+    <!-- Bootstrap CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT"
       crossorigin="anonymous"
     />
+
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body data-bs-spy="scroll" data-bs-target="#mainnavbar">
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    <!-- typedscript for the text animation -->
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const typedElement = document.querySelector(".typed");
-        const items = typedElement.getAttribute("data-typed-items").split(", ");
 
-        new Typed(".typed", {
-          strings: items,
-          typeSpeed: 100,
-          backSpeed: 100,
-          backDelay: 1500,
-          loop: true,
-        });
-      });
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Ahmed Alaa",
+        "jobTitle": "Front-End Developer",
+        "url": "https://github.com/AhmedAlaa8100",
+        "sameAs": [
+          "https://www.linkedin.com/in/ahmed-alaa-elnaggar/",
+          "https://github.com/AhmedAlaa8100"
+        ],
+        "email": "es-ahmed.alaa2027@alexu.edu.eg",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Alexandria",
+          "addressCountry": "Egypt"
+        },
+        "alumniOf": {
+          "@type": "EducationalOrganization",
+          "name": "University of Alexandria"
+        }
+      }
     </script>
-
+  </head>
+  <body data-bs-spy="scroll" data-bs-target="#mainnavbar" data-bs-offset="70">
+    <!-- Navigation -->
     <nav
       id="mainnavbar"
       class="mainnavbar navbar fixed-top navbar-expand-lg bg-black"
@@ -43,7 +93,23 @@
       style="--bs-navbar-color: #fff; --bs-navbar-hover-color: #fff"
     >
       <div class="container">
-        <a class="navbar-brand fs-3" href="#">DevFolio</a>
+        <a
+          class="navbar-brand fs-3 fw-bold"
+          href="#hero"
+          aria-label="Ahmed Alaa Portfolio"
+          >Ahmed Alaa</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item position-relative">
@@ -58,42 +124,10 @@
               <a class="nav-link" href="#services">Services</a>
             </li>
             <li class="nav-item position-relative">
-              <a class="nav-link" href="#portoflio">Work</a>
+              <a class="nav-link" href="#portfolio">Portfolio</a>
             </li>
             <li class="nav-item position-relative">
-              <a class="nav-link" href="#blog">Blog</a>
-            </li>
-            <li class="dropdown position-relative">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Dropdown
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-
-                <!-- Submenu -->
-                <li class="dropdown-submenu position-relative">
-                  <a
-                    class="dropdown-item dropdown-toggle"
-                    href="#"
-                    data-bs-toggle="dropdown"
-                  >
-                    Inner Dropdown
-                  </a>
-                  <ul
-                    class="dropdown-menu position-absolute top-0 start-100 d-none"
-                  >
-                    <li><a class="dropdown-item" href="#">Sub Action 1</a></li>
-                    <li><a class="dropdown-item" href="#">Sub Action 2</a></li>
-                  </ul>
-                </li>
-              </ul>
+              <a class="nav-link" href="#achievements">Achievements</a>
             </li>
             <li class="nav-item position-relative">
               <a class="nav-link" href="#contact">Contact</a>
@@ -103,6 +137,7 @@
       </div>
     </nav>
 
+    <!-- Hero Section -->
     <section
       id="hero"
       class="py-5 min-vh-100 position-relative text-white hero d-flex align-items-center justify-content-center"
@@ -114,105 +149,248 @@
           url(imgs/hero-bg.jpg);
       "
     >
-      <div class="herotext fw-bold">
-        <h1>I am Morgan Freeman</h1>
-        <p class="hero-subtitle text-center fs-3">
+      <div class="herotext fw-bold text-center">
+        <h1 class="display-3 mb-3">I am Ahmed Alaa</h1>
+        <p class="hero-subtitle fs-3 mb-4">
           <span
             class="typed"
-            data-typed-items="Designer, Developer, Freelancer, Photographer"
+            data-typed-items="Front-End Developer, AI Enthusiast, Computer Engineer, Problem Solver"
           ></span>
         </p>
+        <div class="mt-4">
+          <a
+            href="#portfolio"
+            class="btn btn-lg btn-primary me-3 rounded-pill px-4"
+            >View My Work</a
+          >
+          <a
+            href="#contact"
+            class="btn btn-lg btn-outline-light rounded-pill px-4"
+            >Get In Touch</a
+          >
+        </div>
       </div>
     </section>
 
+    <!-- About Section -->
     <section id="about" class="about py-5 bg-mblue">
       <div class="container">
-        <div class="row border bg-white p-5">
-          <div class="col-sm-6">
+        <div class="row border bg-white p-5 shadow-lg rounded-3">
+          <div class="col-lg-6 mb-4 mb-lg-0">
             <div class="leftabout d-flex flex-column">
               <div
-                class="first d-flex gap-1 flex-wrap align-items-center justify-content-around"
+                class="first d-flex gap-3 flex-wrap align-items-center justify-content-around mb-4"
               >
-                <img src="imgs/testimonial-2.jpg" class="rounded-1" alt="" />
+                <img
+                  src="imgs/testimonial-2.jpg"
+                  class="rounded-circle img-fluid"
+                  alt="Ahmed Alaa - Front-End Developer"
+                  width="150"
+                  height="150"
+                  style="object-fit: cover"
+                />
                 <div class="leftinfo">
-                  <p><span class="fw-bold">Name:</span> Morgan Freeman</p>
-                  <p>
-                    <span class="fw-bold">Profile:</span> full stack developer
+                  <p class="mb-2">
+                    <span class="fw-bold">Name:</span> Ahmed Alaa
                   </p>
-                  <p><span class="fw-bold">Email:</span> contact@example.com</p>
-                  <p><span class="fw-bold">Phone:</span> (617) 557-0089</p>
+                  <p class="mb-2">
+                    <span class="fw-bold">Profile:</span> Front-End Developer &
+                    AI Enthusiast
+                  </p>
+                  <p class="mb-2">
+                    <span class="fw-bold">Email:</span>
+                    <a
+                      href="mailto:es-ahmed.alaa2027@alexu.edu.eg"
+                      class="text-decoration-none"
+                      >es-ahmed.alaa2027@alexu.edu.eg</a
+                    >
+                  </p>
+                  <p class="mb-2">
+                    <span class="fw-bold">Phone:</span>
+                    <a href="tel:+201285503661" class="text-decoration-none"
+                      >(+02) 01285503661</a
+                    >
+                  </p>
+                  <p class="mb-2">
+                    <span class="fw-bold">Location:</span> Alexandria, Egypt
+                  </p>
+                  <p class="mb-2">
+                    <span class="fw-bold">Education:</span> Computer &
+                    Communication Engineering
+                  </p>
+                  <p class="mb-0">
+                    <span class="fw-bold">University:</span> University of
+                    Alexandria
+                  </p>
                 </div>
               </div>
               <div class="second mt-3">
-                <p class="fw-semibold">Skill</p>
+                <h4 class="fw-semibold mb-3">Technical Skills</h4>
 
-                <span class="text-muted">HTML 85%</span>
-                <div
-                  class="progress mb-1"
-                  role="progressbar"
-                  aria-label="Basic example"
-                  aria-valuenow="85"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                >
-                  <div class="progress-bar" style="width: 85%"></div>
+                <div class="skill-item mb-3">
+                  <div class="d-flex justify-content-between mb-1">
+                    <span class="text-muted fw-semibold">HTML5</span>
+                    <span class="text-muted">95%</span>
+                  </div>
+                  <div
+                    class="progress"
+                    role="progressbar"
+                    aria-label="HTML5 skill level"
+                    aria-valuenow="95"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    <div class="progress-bar bg-mblue" style="width: 95%"></div>
+                  </div>
                 </div>
-                <span class="text-muted">CSS3 75%</span>
-                <div
-                  class="progress mb-1"
-                  role="progressbar"
-                  aria-label="Basic example"
-                  aria-valuenow="75"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                >
-                  <div class="progress-bar w-75"></div>
+
+                <div class="skill-item mb-3">
+                  <div class="d-flex justify-content-between mb-1">
+                    <span class="text-muted fw-semibold">CSS3</span>
+                    <span class="text-muted">90%</span>
+                  </div>
+                  <div
+                    class="progress"
+                    role="progressbar"
+                    aria-label="CSS3 skill level"
+                    aria-valuenow="90"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    <div class="progress-bar bg-mblue" style="width: 90%"></div>
+                  </div>
                 </div>
-                <span class="text-muted">PHP 50%</span>
-                <div
-                  class="progress mb-1"
-                  role="progressbar"
-                  aria-label="Basic example"
-                  aria-valuenow="50"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                >
-                  <div class="progress-bar w-50"></div>
+
+                <div class="skill-item mb-3">
+                  <div class="d-flex justify-content-between mb-1">
+                    <span class="text-muted fw-semibold">JavaScript</span>
+                    <span class="text-muted">85%</span>
+                  </div>
+                  <div
+                    class="progress"
+                    role="progressbar"
+                    aria-label="JavaScript skill level"
+                    aria-valuenow="85"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    <div class="progress-bar bg-mblue" style="width: 85%"></div>
+                  </div>
                 </div>
-                <span class="text-muted">JAVASCRIPT 90%</span>
-                <div
-                  class="progress mb-1"
-                  role="progressbar"
-                  aria-label="Basic example"
-                  aria-valuenow="90"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                >
-                  <div class="progress-bar" style="width: 90%"></div>
+
+                <div class="skill-item mb-3">
+                  <div class="d-flex justify-content-between mb-1">
+                    <span class="text-muted fw-semibold">Bootstrap</span>
+                    <span class="text-muted">95%</span>
+                  </div>
+                  <div
+                    class="progress"
+                    role="progressbar"
+                    aria-label="Bootstrap skill level"
+                    aria-valuenow="95"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    <div class="progress-bar bg-mblue" style="width: 95%"></div>
+                  </div>
+                </div>
+
+                <div class="skill-item mb-3">
+                  <div class="d-flex justify-content-between mb-1">
+                    <span class="text-muted fw-semibold">Tailwind CSS</span>
+                    <span class="text-muted">85%</span>
+                  </div>
+                  <div
+                    class="progress"
+                    role="progressbar"
+                    aria-label="Tailwind CSS skill level"
+                    aria-valuenow="85"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    <div class="progress-bar bg-mblue" style="width: 85%"></div>
+                  </div>
+                </div>
+
+                <div class="skill-item mb-3">
+                  <div class="d-flex justify-content-between mb-1">
+                    <span class="text-muted fw-semibold">React.js</span>
+                    <span class="text-muted">80%</span>
+                  </div>
+                  <div
+                    class="progress"
+                    role="progressbar"
+                    aria-label="React.js skill level"
+                    aria-valuenow="80"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    <div class="progress-bar bg-mblue" style="width: 80%"></div>
+                  </div>
+                </div>
+
+                <div class="skill-item mb-3">
+                  <div class="d-flex justify-content-between mb-1">
+                    <span class="text-muted fw-semibold">Next.js</span>
+                    <span class="text-muted">75%</span>
+                  </div>
+                  <div
+                    class="progress"
+                    role="progressbar"
+                    aria-label="Next.js skill level"
+                    aria-valuenow="75"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    <div class="progress-bar bg-mblue" style="width: 75%"></div>
+                  </div>
+                </div>
+
+                <div class="skill-item mb-3">
+                  <div class="d-flex justify-content-between mb-1">
+                    <span class="text-muted fw-semibold">Python</span>
+                    <span class="text-muted">80%</span>
+                  </div>
+                  <div
+                    class="progress"
+                    role="progressbar"
+                    aria-label="Python skill level"
+                    aria-valuenow="80"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    <div class="progress-bar bg-mblue" style="width: 80%"></div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col-sm-6">
+          <div class="col-lg-6">
             <div class="rightabout">
-              <h2 class="mb-3 textunderline position-relative">About me</h2>
-              <p class="text-muted">
-                Curabitur non nulla sit amet nisl tempus convallis quis ac
-                lectus. Curabitur arcu erat, accumsan id imperdiet et, porttitor
-                at sem. Praesent sapien massa, convallis a pellentesque nec,
-                egestas non nisi. Nulla porttitor accumsan tincidunt.
+              <h2 class="mb-4 textunderline position-relative">About Me</h2>
+              <p class="text-muted mb-3">
+                Motivated Computer & Communication Engineering student with
+                hands-on experience in software engineering, AI, and front-end
+                development. Currently pursuing my degree at the University of
+                Alexandria with a CGPA of 3.85, expected to graduate in June
+                2027.
               </p>
-              <p class="text-muted">
-                Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.
-                Vivamus suscipit tortor eget felis porttitor volutpat.
-                Vestibulum ac diam sit amet quam vehicula elementum sed sit amet
-                dui. porttitor at sem.
+              <p class="text-muted mb-3">
+                Skilled in building scalable applications, deep learning
+                solutions, and responsive user interfaces. I have a passion for
+                creating beautiful, functional web experiences and solving
+                complex problems through code.
               </p>
-              <p class="text-muted">
-                Nulla porttitor accumsan tincidunt. Quisque velit nisi, pretium
-                ut lacinia in, elementum id enim. Nulla porttitor accumsan
-                tincidunt. Mauris blandit aliquet elit, eget tincidunt nibh
-                pulvinar a.
+              <p class="text-muted mb-3">
+                Proficient in modern web technologies including React, Next.js,
+                TypeScript, and Python. Strong foundation in machine learning
+                with experience in TensorFlow and PyTorch. Always eager to learn
+                new technologies and contribute to innovative projects.
+              </p>
+              <p class="text-muted mb-0">
+                Currently learning advanced React patterns, Machine Learning
+                algorithms, and System Design. Open to internships,
+                collaborations, and open source projects.
               </p>
             </div>
           </div>
@@ -220,96 +398,94 @@
       </div>
     </section>
 
+    <!-- Services Section -->
     <section id="services" class="services py-5">
-      <div class="maintext text-center position-relative text-uppercase">
-        <h2 class="fw-bold fs-1">Services</h2>
-        <p class="text-muted">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-        </p>
-      </div>
-      <div class="container mt-5">
+      <div class="container">
+        <div class="maintext text-center position-relative text-uppercase mb-5">
+          <h2 class="fw-bold fs-1">Services</h2>
+          <p class="text-muted mt-3">What I Offer</p>
+        </div>
         <div class="row text-center g-4">
           <div class="col-md-4">
-            <div class="bg-white p-4 rounded-4 aboutcard">
+            <div class="bg-white p-4 rounded-4 aboutcard h-100 shadow-sm">
               <i
-                class="fa-solid fa-briefcase fs-2 p-4 border border-5 rounded-circle"
-              ></i>
-              <h3 class="my-2">Web Design</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing <br />elit.
-                Magni adipisci eaque autem fugiat! Quia,<br />
-                provident vitae! Magni tempora perferendis eum <br />non
-                provident.
-              </p>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="bg-white p-4 rounded-4 aboutcard">
-              <i
-                class="fa-solid fa-list-check fs-2 p-4 border border-5 rounded-circle"
+                class="fa-solid fa-laptop-code fs-2 p-4 border border-5 rounded-circle mb-3"
+                aria-hidden="true"
               ></i>
               <h3 class="my-2">Web Development</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing <br />elit.
-                Magni adipisci eaque autem fugiat! Quia,<br />
-                provident vitae! Magni tempora perferendis eum <br />non
-                provident.
+              <p class="text-muted">
+                Building modern, responsive web applications using React,
+                Next.js, and TypeScript. Creating scalable solutions with clean
+                code and best practices.
               </p>
             </div>
           </div>
           <div class="col-md-4">
-            <div class="bg-white p-4 rounded-4 aboutcard">
+            <div class="bg-white p-4 rounded-4 aboutcard h-100 shadow-sm">
               <i
-                class="fa-solid fa-chart-simple fs-2 p-4 border border-5 rounded-circle"
+                class="fa-solid fa-palette fs-2 p-4 border border-5 rounded-circle mb-3"
+                aria-hidden="true"
               ></i>
-              <h3 class="my-2">Photography</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing <br />elit.
-                Magni adipisci eaque autem fugiat! Quia,<br />
-                provident vitae! Magni tempora perferendis eum <br />non
-                provident.
+              <h3 class="my-2">Web Design</h3>
+              <p class="text-muted">
+                Designing beautiful, user-friendly interfaces with a focus on
+                UX/UI principles. Creating pixel-perfect designs that are both
+                functional and aesthetically pleasing.
               </p>
             </div>
           </div>
           <div class="col-md-4">
-            <div class="bg-white p-4 rounded-4 aboutcard">
+            <div class="bg-white p-4 rounded-4 aboutcard h-100 shadow-sm">
               <i
-                class="fa-solid fa-binoculars fs-2 p-4 border border-5 rounded-circle"
+                class="fa-solid fa-mobile-screen-button fs-2 p-4 border border-5 rounded-circle mb-3"
+                aria-hidden="true"
               ></i>
               <h3 class="my-2">Responsive Design</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing <br />elit.
-                Magni adipisci eaque autem fugiat! Quia,<br />
-                provident vitae! Magni tempora perferendis eum <br />non
-                provident.
+              <p class="text-muted">
+                Ensuring your website looks perfect on all devices. Mobile-first
+                approach with Bootstrap and Tailwind CSS for seamless
+                cross-platform experiences.
               </p>
             </div>
           </div>
           <div class="col-md-4">
-            <div class="bg-white p-4 rounded-4 aboutcard">
+            <div class="bg-white p-4 rounded-4 aboutcard h-100 shadow-sm">
               <i
-                class="fa-solid fa-sun fs-2 p-4 border border-5 rounded-circle"
+                class="fa-solid fa-brain fs-2 p-4 border border-5 rounded-circle mb-3"
+                aria-hidden="true"
               ></i>
-              <h3 class="my-2">Graphic Design</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing <br />elit.
-                Magni adipisci eaque autem fugiat! Quia,<br />
-                provident vitae! Magni tempora perferendis eum <br />non
-                provident.
+              <h3 class="my-2">AI & Machine Learning</h3>
+              <p class="text-muted">
+                Developing AI solutions using Python, TensorFlow, and PyTorch.
+                Specialized in computer vision, NLP, and deep learning
+                applications.
               </p>
             </div>
           </div>
           <div class="col-md-4">
-            <div class="bg-white p-4 rounded-4 aboutcard">
+            <div class="bg-white p-4 rounded-4 aboutcard h-100 shadow-sm">
               <i
-                class="fa-solid fa-calendar fs-2 p-4 border border-5 rounded-circle"
+                class="fa-solid fa-code fs-2 p-4 border border-5 rounded-circle mb-3"
+                aria-hidden="true"
               ></i>
-              <h3 class="my-2">Marketing Services</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing <br />elit.
-                Magni adipisci eaque autem fugiat! Quia,<br />
-                provident vitae! Magni tempora perferendis eum <br />non
-                provident.
+              <h3 class="my-2">Front-End Development</h3>
+              <p class="text-muted">
+                Creating interactive user interfaces with React, Next.js, and
+                modern JavaScript. Focus on performance, accessibility, and user
+                experience.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="bg-white p-4 rounded-4 aboutcard h-100 shadow-sm">
+              <i
+                class="fa-solid fa-rocket fs-2 p-4 border border-5 rounded-circle mb-3"
+                aria-hidden="true"
+              ></i>
+              <h3 class="my-2">Performance Optimization</h3>
+              <p class="text-muted">
+                Optimizing websites for speed and performance. Implementing best
+                practices for SEO, loading times, and user engagement.
               </p>
             </div>
           </div>
@@ -317,71 +493,82 @@
       </div>
     </section>
 
+    <!-- Statistics Section -->
     <section class="numbers text-white py-5">
       <div
         class="container d-flex justify-content-around align-items-center flex-column flex-md-row text-center py-5"
       >
-        <div class="numbersitem">
+        <div class="numbersitem mb-4 mb-md-0">
           <i
-            class="fa-solid fa-check fs-2 p-4 border border-5 rounded-circle"
+            class="fa-solid fa-folder-open fs-2 p-4 border border-5 rounded-circle mb-3"
+            aria-hidden="true"
           ></i>
-          <h3 class="my-2">450</h3>
-          <p>WORKS COMPLETED</p>
+          <h3 class="my-2 display-4 fw-bold">50+</h3>
+          <p class="fs-5">Projects Completed</p>
         </div>
-        <div class="numbersitem">
+        <div class="numbersitem mb-4 mb-md-0">
           <i
-            class="fa-solid fa-book fs-2 p-4 border border-5 rounded-circle"
+            class="fa-solid fa-users fs-2 p-4 border border-5 rounded-circle mb-3"
+            aria-hidden="true"
           ></i>
-          <h3 class="my-2">25</h3>
-          <p>YEARS OF EXPERIENCE</p>
+          <h3 class="my-2 display-4 fw-bold">30+</h3>
+          <p class="fs-5">Happy Clients</p>
         </div>
-        <div class="numbersitem">
+        <div class="numbersitem mb-4 mb-md-0">
           <i
-            class="fa-solid fa-people-group fs-2 p-4 border border-5 rounded-circle"
+            class="fa-solid fa-code-branch fs-2 p-4 border border-5 rounded-circle mb-3"
+            aria-hidden="true"
           ></i>
-          <h3 class="my-2">550</h3>
-          <p>TOTAL CLIENTS</p>
+          <h3 class="my-2 display-4 fw-bold">1000+</h3>
+          <p class="fs-5">Lines of Code</p>
         </div>
-        <div class="numbersitem">
+        <div class="numbersitem mb-4 mb-md-0">
           <i
-            class="fa-solid fa-award fs-2 p-4 border border-5 rounded-circle"
+            class="fa-solid fa-award fs-2 p-4 border border-5 rounded-circle mb-3"
+            aria-hidden="true"
           ></i>
-          <h3 class="my-2">48</h3>
-          <p>AWARD WON</p>
+          <h3 class="my-2 display-4 fw-bold">5+</h3>
+          <p class="fs-5">Awards & Certifications</p>
         </div>
       </div>
     </section>
 
-    <section id="portoflio" class="portoflio py-5">
-      <div class="maintext text-center position-relative text-uppercase">
-        <h2 class="fw-bold fs-1">Portfolio</h2>
-        <p class="text-muted">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-        </p>
-      </div>
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio py-5">
+      <div class="container">
+        <div class="maintext text-center position-relative text-uppercase mb-5">
+          <h2 class="fw-bold fs-1">Portfolio</h2>
+          <p class="text-muted mt-3">My Recent Work</p>
+        </div>
 
-      <div class="container mt-5">
         <div class="row text-center g-4">
+          <!-- Project 1 -->
           <div class="col-md-4">
-            <div class="portofliocard bg-white">
+            <div class="portfolio-card bg-white shadow-sm">
               <div
                 class="imgcontainer"
                 data-bs-toggle="modal"
-                data-bs-target="#img1"
+                data-bs-target="#project1"
+                role="button"
+                aria-label="View E-Commerce Website project"
               >
-                <img src="imgs/work-1.jpg" class="w-100" alt="" />
+                <img
+                  src="imgs/work-1.jpg"
+                  class="w-100"
+                  alt="E-Commerce Website - Next.js Project"
+                />
               </div>
               <div
-                class="cardtext d-flex justify-content-between align-items-center flex-wrap mx-2"
+                class="cardtext d-flex justify-content-between align-items-center flex-wrap mx-2 p-3"
               >
                 <div class="left d-flex flex-column flex-wrap">
-                  <h5 class="fw-bold py-2">Lorem impsum dolor</h5>
-                  <p class="fs-6 text-muted">
-                    <span class="text-mblue">Web Design</span> / 18 Sep. 2018
+                  <h5 class="fw-bold py-2">E-Commerce Website</h5>
+                  <p class="fs-6 text-muted mb-0">
+                    <span class="text-mblue">Next.js</span> / Dec 2024
                   </p>
                 </div>
                 <div class="right border border-4 rounded-circle border-mblue">
-                  <a href="">
+                  <a href="#" aria-label="View project details">
                     <i class="fa-solid fa-plus p-2" style="color: #0078ff"></i>
                   </a>
                 </div>
@@ -390,14 +577,17 @@
             <!-- Modal -->
             <div
               class="modal fade"
-              id="img1"
+              id="project1"
               tabindex="-1"
-              aria-labelledby="img1Label"
+              aria-labelledby="project1Label"
               aria-hidden="true"
             >
               <div class="modal-dialog modal-dialog-centered modal-xl">
                 <div class="modal-content">
                   <div class="modal-header">
+                    <h5 class="modal-title" id="project1Label">
+                      E-Commerce Website
+                    </h5>
                     <button
                       type="button"
                       class="btn-close"
@@ -406,133 +596,54 @@
                     ></button>
                   </div>
                   <div class="modal-body">
-                    <img src="imgs/work-1.jpg" class="w-100" alt="" />
+                    <img
+                      src="imgs/work-1.jpg"
+                      class="w-100 mb-3"
+                      alt="E-Commerce Website"
+                    />
+                    <p class="mb-2">
+                      <strong>Technologies:</strong> Next.js, Shadcn,
+                      TypeScript, Tailwind CSS
+                    </p>
+                    <p class="mb-2">
+                      <strong>Description:</strong> Modern e-commerce platform
+                      with advanced features, responsive design, and optimized
+                      performance.
+                    </p>
+                    <p class="mb-0"><strong>Date:</strong> December 2024</p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col-md-4">
-            <div class="portofliocard bg-white">
-              <div
-                class="imgcontainer"
-                data-bs-toggle="modal"
-                data-bs-target="#img2"
-              >
-                <img src="imgs/work-2.jpg" class="w-100" alt="" />
-              </div>
-              <div
-                class="cardtext d-flex justify-content-between align-items-center flex-wrap mx-2"
-              >
-                <div class="left d-flex flex-column flex-wrap">
-                  <h5 class="fw-bold py-2">Loreda Cuno Nere</h5>
-                  <p class="fs-6 text-muted">
-                    <span class="text-mblue">Web Design</span> / 18 Sep. 2018
-                  </p>
-                </div>
-                <div class="right border border-4 rounded-circle border-mblue">
-                  <a href="">
-                    <i class="fa-solid fa-plus p-2" style="color: #0078ff"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <!-- Modal -->
-            <div
-              class="modal fade"
-              id="img2"
-              tabindex="-1"
-              aria-labelledby="img2Label"
-              aria-hidden="true"
-            >
-              <div class="modal-dialog modal-dialog-centered modal-xl">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <button
-                      type="button"
-                      class="btn-close"
-                      data-bs-dismiss="modal"
-                      aria-label="Close"
-                    ></button>
-                  </div>
-                  <div class="modal-body">
-                    <img src="imgs/work-2.jpg" class="w-100" alt="" />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="portofliocard bg-white">
-              <div
-                class="imgcontainer"
-                data-bs-toggle="modal"
-                data-bs-target="#img3"
-              >
-                <img src="imgs/work-3.jpg" class="w-100" alt="" />
-              </div>
-              <div
-                class="cardtext d-flex justify-content-between align-items-center flex-wrap mx-2"
-              >
-                <div class="left d-flex flex-column flex-wrap">
-                  <h5 class="fw-bold py-2">Mavrito Lana Dere</h5>
-                  <p class="fs-6 text-muted">
-                    <span class="text-mblue">Web Design</span> / 18 Sep. 2018
-                  </p>
-                </div>
-                <div class="right border border-4 rounded-circle border-mblue">
-                  <a href="">
-                    <i class="fa-solid fa-plus p-2" style="color: #0078ff"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <!-- Modal -->
-            <div
-              class="modal fade"
-              id="img3"
-              tabindex="-1"
-              aria-labelledby="img3Label"
-              aria-hidden="true"
-            >
-              <div class="modal-dialog modal-dialog-centered modal-xl">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <button
-                      type="button"
-                      class="btn-close"
-                      data-bs-dismiss="modal"
-                      aria-label="Close"
-                    ></button>
-                  </div>
-                  <div class="modal-body">
-                    <img src="imgs/work-3.jpg" class="w-100" alt="" />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="portofliocard bg-white">
-              <div
-                class="imgcontainer"
-                data-bs-toggle="modal"
-                data-bs-target="#img4"
-              >
-                <img src="imgs/work-4.jpg" class="w-100" alt="" />
-              </div>
-              <div
-                class="cardtext d-flex justify-content-between align-items-center flex-wrap mx-2"
-              >
-                <div class="left d-flex flex-column flex-wrap">
-                  <h5 class="fw-bold py-2 px-0">Bindo Laro Cado</h5>
-                  <p class="fs-6 text-muted">
-                    <span class="text-mblue">Web Design</span> / 18 Sep. 2018
-                  </p>
-                </div>
 
+          <!-- Project 2 -->
+          <div class="col-md-4">
+            <div class="portfolio-card bg-white shadow-sm">
+              <div
+                class="imgcontainer"
+                data-bs-toggle="modal"
+                data-bs-target="#project2"
+                role="button"
+                aria-label="View Social Media Website project"
+              >
+                <img
+                  src="imgs/work-2.jpg"
+                  class="w-100"
+                  alt="Social Media Website - React.js Project"
+                />
+              </div>
+              <div
+                class="cardtext d-flex justify-content-between align-items-center flex-wrap mx-2 p-3"
+              >
+                <div class="left d-flex flex-column flex-wrap">
+                  <h5 class="fw-bold py-2">Social Media Website</h5>
+                  <p class="fs-6 text-muted mb-0">
+                    <span class="text-mblue">React.js</span> / Nov 2024
+                  </p>
+                </div>
                 <div class="right border border-4 rounded-circle border-mblue">
-                  <a href="">
+                  <a href="#" aria-label="View project details">
                     <i class="fa-solid fa-plus p-2" style="color: #0078ff"></i>
                   </a>
                 </div>
@@ -541,14 +652,17 @@
             <!-- Modal -->
             <div
               class="modal fade"
-              id="img4"
+              id="project2"
               tabindex="-1"
-              aria-labelledby="img4Label"
+              aria-labelledby="project2Label"
               aria-hidden="true"
             >
               <div class="modal-dialog modal-dialog-centered modal-xl">
                 <div class="modal-content">
                   <div class="modal-header">
+                    <h5 class="modal-title" id="project2Label">
+                      Social Media Website
+                    </h5>
                     <button
                       type="button"
                       class="btn-close"
@@ -557,33 +671,54 @@
                     ></button>
                   </div>
                   <div class="modal-body">
-                    <img src="imgs/work-4.jpg" class="w-100" alt="" />
+                    <img
+                      src="imgs/work-2.jpg"
+                      class="w-100 mb-3"
+                      alt="Social Media Website"
+                    />
+                    <p class="mb-2">
+                      <strong>Technologies:</strong> React.js, TailwindCSS,
+                      JavaScript
+                    </p>
+                    <p class="mb-2">
+                      <strong>Description:</strong> Full-featured social media
+                      platform with real-time updates, user authentication, and
+                      responsive design.
+                    </p>
+                    <p class="mb-0"><strong>Date:</strong> November 2024</p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col-md-4">
-            <div class="portofliocard bg-white">
-              <div
-                class="imgcontainer"
-                data-bs-toggle="modal"
-                data-bs-target="#img5"
-              >
-                <img src="imgs/work-5.jpg" class="w-100" alt="" />
-              </div>
-              <div
-                class="cardtext d-flex justify-content-between align-items-center flex-wrap mx-2"
-              >
-                <div class="left d-flex flex-column flex-wrap">
-                  <h5 class="fw-bold py-2">Studio Lena Mado</h5>
-                  <p class="fs-6 text-muted">
-                    <span class="text-mblue">Web Design</span> / 18 Sep. 2018
-                  </p>
-                </div>
 
+          <!-- Project 3 -->
+          <div class="col-md-4">
+            <div class="portfolio-card bg-white shadow-sm">
+              <div
+                class="imgcontainer"
+                data-bs-toggle="modal"
+                data-bs-target="#project3"
+                role="button"
+                aria-label="View AI Hate Speech Detection project"
+              >
+                <img
+                  src="imgs/work-3.jpg"
+                  class="w-100"
+                  alt="Hate Speech Detection - AI Project"
+                />
+              </div>
+              <div
+                class="cardtext d-flex justify-content-between align-items-center flex-wrap mx-2 p-3"
+              >
+                <div class="left d-flex flex-column flex-wrap">
+                  <h5 class="fw-bold py-2">Hate Speech Detection</h5>
+                  <p class="fs-6 text-muted mb-0">
+                    <span class="text-mblue">AI/ML</span> / Oct 2024
+                  </p>
+                </div>
                 <div class="right border border-4 rounded-circle border-mblue">
-                  <a href="">
+                  <a href="#" aria-label="View project details">
                     <i class="fa-solid fa-plus p-2" style="color: #0078ff"></i>
                   </a>
                 </div>
@@ -592,14 +727,17 @@
             <!-- Modal -->
             <div
               class="modal fade"
-              id="img5"
+              id="project3"
               tabindex="-1"
-              aria-labelledby="img5Label"
+              aria-labelledby="project3Label"
               aria-hidden="true"
             >
               <div class="modal-dialog modal-dialog-centered modal-xl">
                 <div class="modal-content">
                   <div class="modal-header">
+                    <h5 class="modal-title" id="project3Label">
+                      Hate Speech Detection in Arabic
+                    </h5>
                     <button
                       type="button"
                       class="btn-close"
@@ -608,32 +746,54 @@
                     ></button>
                   </div>
                   <div class="modal-body">
-                    <img src="imgs/work-5.jpg" class="w-100" alt="" />
+                    <img
+                      src="imgs/work-3.jpg"
+                      class="w-100 mb-3"
+                      alt="Hate Speech Detection Project"
+                    />
+                    <p class="mb-2">
+                      <strong>Technologies:</strong> Python, Deep Learning, NLP,
+                      TensorFlow
+                    </p>
+                    <p class="mb-2">
+                      <strong>Description:</strong> Advanced NLP solution for
+                      detecting hate speech in Arabic text using deep learning
+                      models.
+                    </p>
+                    <p class="mb-0"><strong>Date:</strong> October 2024</p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+
+          <!-- Project 4 -->
           <div class="col-md-4">
-            <div class="portofliocard bg-white">
+            <div class="portfolio-card bg-white shadow-sm">
               <div
                 class="imgcontainer"
                 data-bs-toggle="modal"
-                data-bs-target="#img6"
+                data-bs-target="#project4"
+                role="button"
+                aria-label="View Computer Vision Application project"
               >
-                <img src="imgs/work-6.jpg" class="w-100" alt="" />
+                <img
+                  src="imgs/work-4.jpg"
+                  class="w-100"
+                  alt="Computer Vision - OpenCV Project"
+                />
               </div>
               <div
-                class="cardtext d-flex justify-content-between align-items-center flex-wrap mx-2"
+                class="cardtext d-flex justify-content-between align-items-center flex-wrap mx-2 p-3"
               >
                 <div class="left d-flex flex-column flex-wrap">
-                  <h5 class="fw-bold py-2">Studio Big Bang</h5>
-                  <p class="fs-6 text-muted">
-                    <span class="text-mblue">Web Design</span> / 18 Sep. 2018
+                  <h5 class="fw-bold py-2 px-0">Computer Vision App</h5>
+                  <p class="fs-6 text-muted mb-0">
+                    <span class="text-mblue">OpenCV</span> / Sep 2024
                   </p>
                 </div>
                 <div class="right border border-4 rounded-circle border-mblue">
-                  <a href="">
+                  <a href="#" aria-label="View project details">
                     <i class="fa-solid fa-plus p-2" style="color: #0078ff"></i>
                   </a>
                 </div>
@@ -642,14 +802,17 @@
             <!-- Modal -->
             <div
               class="modal fade"
-              id="img6"
+              id="project4"
               tabindex="-1"
-              aria-labelledby="img6Label"
+              aria-labelledby="project4Label"
               aria-hidden="true"
             >
               <div class="modal-dialog modal-dialog-centered modal-xl">
                 <div class="modal-content">
                   <div class="modal-header">
+                    <h5 class="modal-title" id="project4Label">
+                      Computer Vision Applications
+                    </h5>
                     <button
                       type="button"
                       class="btn-close"
@@ -658,7 +821,169 @@
                     ></button>
                   </div>
                   <div class="modal-body">
-                    <img src="imgs/work-6.jpg" class="w-100" alt="" />
+                    <img
+                      src="imgs/work-4.jpg"
+                      class="w-100 mb-3"
+                      alt="Computer Vision Application"
+                    />
+                    <p class="mb-2">
+                      <strong>Technologies:</strong> Python, OpenCV, YOLO,
+                      Real-time Processing
+                    </p>
+                    <p class="mb-2">
+                      <strong>Description:</strong> Real-time object detection
+                      and image processing applications using YOLO and OpenCV.
+                    </p>
+                    <p class="mb-0"><strong>Date:</strong> September 2024</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 5 -->
+          <div class="col-md-4">
+            <div class="portfolio-card bg-white shadow-sm">
+              <div
+                class="imgcontainer"
+                data-bs-toggle="modal"
+                data-bs-target="#project5"
+                role="button"
+                aria-label="View Gym Management System project"
+              >
+                <img
+                  src="imgs/work-5.jpg"
+                  class="w-100"
+                  alt="Gym Management System - Java Project"
+                />
+              </div>
+              <div
+                class="cardtext d-flex justify-content-between align-items-center flex-wrap mx-2 p-3"
+              >
+                <div class="left d-flex flex-column flex-wrap">
+                  <h5 class="fw-bold py-2">Gym Management System</h5>
+                  <p class="fs-6 text-muted mb-0">
+                    <span class="text-mblue">Java</span> / Aug 2024
+                  </p>
+                </div>
+                <div class="right border border-4 rounded-circle border-mblue">
+                  <a href="#" aria-label="View project details">
+                    <i class="fa-solid fa-plus p-2" style="color: #0078ff"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Modal -->
+            <div
+              class="modal fade"
+              id="project5"
+              tabindex="-1"
+              aria-labelledby="project5Label"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog modal-dialog-centered modal-xl">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="project5Label">
+                      Gym Management System
+                    </h5>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="modal-body">
+                    <img
+                      src="imgs/work-5.jpg"
+                      class="w-100 mb-3"
+                      alt="Gym Management System"
+                    />
+                    <p class="mb-2">
+                      <strong>Technologies:</strong> Java, Swing, Database
+                      Integration
+                    </p>
+                    <p class="mb-2">
+                      <strong>Description:</strong> Comprehensive desktop
+                      application for managing gym members, subscriptions, and
+                      payments.
+                    </p>
+                    <p class="mb-0"><strong>Date:</strong> August 2024</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 6 -->
+          <div class="col-md-4">
+            <div class="portfolio-card bg-white shadow-sm">
+              <div
+                class="imgcontainer"
+                data-bs-toggle="modal"
+                data-bs-target="#project6"
+                role="button"
+                aria-label="View Portfolio Website project"
+              >
+                <img
+                  src="imgs/work-6.jpg"
+                  class="w-100"
+                  alt="Portfolio Website - Bootstrap Project"
+                />
+              </div>
+              <div
+                class="cardtext d-flex justify-content-between align-items-center flex-wrap mx-2 p-3"
+              >
+                <div class="left d-flex flex-column flex-wrap">
+                  <h5 class="fw-bold py-2">Portfolio Website</h5>
+                  <p class="fs-6 text-muted mb-0">
+                    <span class="text-mblue">Bootstrap</span> / Jul 2024
+                  </p>
+                </div>
+                <div class="right border border-4 rounded-circle border-mblue">
+                  <a href="#" aria-label="View project details">
+                    <i class="fa-solid fa-plus p-2" style="color: #0078ff"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Modal -->
+            <div
+              class="modal fade"
+              id="project6"
+              tabindex="-1"
+              aria-labelledby="project6Label"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog modal-dialog-centered modal-xl">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="project6Label">
+                      Portfolio & Mealify Websites
+                    </h5>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="modal-body">
+                    <img
+                      src="imgs/work-6.jpg"
+                      class="w-100 mb-3"
+                      alt="Portfolio Website"
+                    />
+                    <p class="mb-2">
+                      <strong>Technologies:</strong> HTML, CSS, Bootstrap
+                    </p>
+                    <p class="mb-2">
+                      <strong>Description:</strong> Responsive portfolio and
+                      restaurant websites with modern design and smooth
+                      animations.
+                    </p>
+                    <p class="mb-0"><strong>Date:</strong> July 2024</p>
                   </div>
                 </div>
               </div>
@@ -668,6 +993,7 @@
       </div>
     </section>
 
+    <!-- Testimonials Section -->
     <section class="workextention py-5">
       <div
         id="carouselExampleIndicators"
@@ -677,11 +1003,19 @@
         <div class="carousel-inner">
           <div class="carousel-item active">
             <div class="container text-white text-center py-5">
-              <img src="imgs/testimonial-2.jpg" class="rounded-circle" alt="" />
-              <h3 class="pt-3">Xavi Alonso</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit <br />
-                Consequatur, cupiditate!
+              <img
+                src="imgs/testimonial-2.jpg"
+                class="rounded-circle mb-4"
+                alt="Testimonial from client"
+                width="120"
+                height="120"
+                style="object-fit: cover"
+              />
+              <h3 class="pt-3 mb-3">Excellent Work</h3>
+              <p class="fs-5">
+                Ahmed delivered an outstanding e-commerce website that exceeded
+                our expectations. <br />
+                Professional, responsive, and always on time.
               </p>
             </div>
           </div>
@@ -689,18 +1023,22 @@
             <div class="container text-white text-center py-5">
               <img
                 src="imgs/testimonial-4.jpeg"
-                class="rounded-circle"
-                alt=""
+                class="rounded-circle mb-4"
+                alt="Testimonial from client"
+                width="120"
+                height="120"
+                style="object-fit: cover"
               />
-              <h3 class="pt-3">Marta Socrate</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit <br />
-                Consequatur, cupiditate!
+              <h3 class="pt-3 mb-3">Highly Recommended</h3>
+              <p class="fs-5">
+                Working with Ahmed was a pleasure. His attention to detail and
+                technical expertise <br />
+                made our project a huge success.
               </p>
             </div>
           </div>
         </div>
-        <div class="carousel-indicators position-static">
+        <div class="carousel-indicators position-static mt-4">
           <button
             type="button"
             data-bs-target="#carouselExampleIndicators"
@@ -719,134 +1057,91 @@
       </div>
     </section>
 
-    <section id="blog" class="blog py-5 bg-offwhite">
-      <div class="maintext text-center position-relative">
-        <h2 class="fw-bold fs-1 text-uppercase">Blog</h2>
-        <p class="text-muted">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-        </p>
-      </div>
-      <div class="container mt-5">
+    <!-- Achievements Section -->
+    <section id="achievements" class="blog py-5 bg-offwhite">
+      <div class="container">
+        <div class="maintext text-center position-relative mb-5">
+          <h2 class="fw-bold fs-1 text-uppercase">
+            Achievements & Certifications
+          </h2>
+          <p class="text-muted mt-3">My Accomplishments</p>
+        </div>
         <div class="row g-4">
           <div class="col-md-4">
-            <div class="card bg-white">
+            <div class="card bg-white shadow-sm h-100">
               <div class="imgcontainer position-relative">
-                <img src="imgs/post-1.jpg" class="w-100" alt="" />
+                <img
+                  src="imgs/post-1.jpg"
+                  class="w-100"
+                  alt="Deep Learning Specialization Certificate"
+                />
                 <span
-                  class="position-absolute top-100 start-50 translate-middle text-white bg-mblue px-2 py-1 rounded-2"
-                  >Travel</span
+                  class="position-absolute top-100 start-50 translate-middle text-white bg-mblue px-2 py-1 rounded-2 fw-semibold"
+                  >Certification</span
                 >
               </div>
-              <div class="cardtext d-flex flex-column">
-                <div class="first py-3 mx-2">
-                  <a class="text-decoration-none text-black" href="">
-                    <h5>See more ideas about Travel</h5>
-                  </a>
-                  <p class="text-muted">
-                    Proin eget tortor risus. Pellentesque in ipsum id orci<br />
-                    porta dapibus. Praesent sapien massa, convallis a<br />
-                    pellentesque nec, egestas non nisi.
+              <div class="cardtext d-flex flex-column mt-2">
+                <div class="first py-3 mx-3">
+                  <h5 class="fw-bold">Deep Learning Specialization</h5>
+                  <p class="text-muted mb-2">
+                    Completed comprehensive deep learning course covering neural
+                    networks, CNNs, RNNs, and advanced AI techniques.
                   </p>
-                </div>
-                <div
-                  class="second bg-body-secondary d-flex justify-content-between align-items-center border-black border-top p-2"
-                >
-                  <div class="left d-flex align-items-center">
-                    <a href="" class="text-decoration-none text-black">
-                      <img
-                        src="imgs/testimonial-2.jpg"
-                        class="smallimg rounded-circle"
-                        alt=""
-                      />
-                      <span>Morgan Freeman</span>
-                    </a>
-                  </div>
-                  <div class="right text-muted">
-                    <i class="fa-regular fa-clock"></i>
-                    <span>10 min</span>
-                  </div>
+                  <p class="text-muted mb-0">
+                    <strong>Issued by:</strong> Coursera (2025)
+                  </p>
                 </div>
               </div>
             </div>
           </div>
           <div class="col-md-4">
-            <div class="card bg-white">
+            <div class="card bg-white shadow-sm h-100">
               <div class="imgcontainer position-relative">
-                <img src="imgs/post-2.jpg" class="w-100" alt="" />
+                <img
+                  src="imgs/post-2.jpg"
+                  class="w-100"
+                  alt="Front-End Full Diploma Certificate"
+                />
                 <span
-                  class="position-absolute top-100 start-50 translate-middle text-white bg-mblue px-2 py-1 rounded-2"
-                  >Travel</span
+                  class="position-absolute top-100 start-50 translate-middle text-white bg-mblue px-2 py-1 rounded-2 fw-semibold"
+                  >Certification</span
                 >
               </div>
-              <div class="cardtext d-flex flex-column">
-                <div class="first py-3 mx-2">
-                  <a class="text-decoration-none" href="">
-                    <h5>See more ideas about Travel</h5>
-                  </a>
-                  <p class="text-muted">
-                    Proin eget tortor risus. Pellentesque in ipsum id orci<br />
-                    porta dapibus. Praesent sapien massa, convallis a<br />
-                    pellentesque nec, egestas non nisi.
+              <div class="cardtext mt-2 d-flex flex-column">
+                <div class="first py-3 mx-3">
+                  <h5 class="fw-bold">Front-End Full Diploma</h5>
+                  <p class="text-muted mb-2">
+                    Mastered modern front-end development including React,
+                    Next.js, TypeScript, and advanced web technologies.
                   </p>
-                </div>
-                <div
-                  class="second bg-body-secondary d-flex justify-content-between align-items-center border-black border-top p-2"
-                >
-                  <div class="left d-flex align-items-center">
-                    <a href="" class="text-decoration-none">
-                      <img
-                        src="imgs/testimonial-2.jpg"
-                        class="smallimg rounded-circle"
-                        alt=""
-                      />
-                      <span>Morgan Freeman</span>
-                    </a>
-                  </div>
-                  <div class="right text-muted">
-                    <i class="fa-regular fa-clock"></i>
-                    <span>10 min</span>
-                  </div>
+                  <p class="text-muted mb-0">
+                    <strong>Issued by:</strong> Route Academy (2025)
+                  </p>
                 </div>
               </div>
             </div>
           </div>
           <div class="col-md-4">
-            <div class="card bg-white">
+            <div class="card bg-white shadow-sm h-100">
               <div class="imgcontainer position-relative">
-                <img src="imgs/post-3.jpg" class="w-100" alt="" />
+                <img
+                  src="imgs/post-3.jpg"
+                  class="w-100"
+                  alt="Top 10 Thanaweya-Amma Achievement"
+                />
                 <span
-                  class="position-absolute top-100 start-50 translate-middle text-white bg-mblue px-2 py-1 rounded-2"
-                  >Travel</span
+                  class="position-absolute top-100 start-50 translate-middle text-white bg-mblue px-2 py-1 rounded-2 fw-semibold"
+                  >Achievement</span
                 >
               </div>
-              <div class="cardtext d-flex flex-column">
-                <div class="first py-3 mx-2">
-                  <a class="text-decoration-none text-black" href="">
-                    <h5>See more ideas about Travel</h5>
-                  </a>
-                  <p class="text-muted">
-                    Proin eget tortor risus. Pellentesque in ipsum id orci<br />
-                    porta dapibus. Praesent sapien massa, convallis a<br />
-                    pellentesque nec, egestas non nisi.
+              <div class="cardtext mt-2 d-flex flex-column">
+                <div class="first py-3 mx-3">
+                  <h5 class="fw-bold">Top 10 Thanaweya-Amma Students</h5>
+                  <p class="text-muted mb-2">
+                    Ranked among top 10 students in Alexandria (2022). Honored
+                    by the Governor for outstanding academic performance.
                   </p>
-                </div>
-                <div
-                  class="second bg-body-secondary d-flex justify-content-between align-items-center border-black border-top p-2"
-                >
-                  <div class="left d-flex align-items-center">
-                    <a href="" class="text-decoration-none text-black">
-                      <img
-                        src="imgs/testimonial-2.jpg"
-                        class="smallimg rounded-circle"
-                        alt=""
-                      />
-                      <span>Morgan Freeman</span>
-                    </a>
-                  </div>
-                  <div class="right text-muted">
-                    <i class="fa-regular fa-clock"></i>
-                    <span>10 min</span>
-                  </div>
+                  <p class="text-muted mb-0"><strong>Awarded:</strong> 2022</p>
                 </div>
               </div>
             </div>
@@ -855,39 +1150,74 @@
       </div>
     </section>
 
+    <!-- Contact Section -->
     <section id="contact" class="contact py-5">
-      <div class="container bg-white p-5">
-        <div class="row">
-          <div class="col-sm-6">
+      <div class="container">
+        <div class="maintext text-center position-relative mb-5">
+          <h2 class="fw-bold fs-1 text-uppercase text-white">Get In Touch</h2>
+          <p class="text-white mt-3">
+            Let's work together on your next project
+          </p>
+        </div>
+        <div class="row bg-white p-5 shadow-lg rounded-3">
+          <div class="col-lg-6 mb-4 mb-lg-0">
             <div>
-              <h2 class="textunderline position-relative py-2 mb-5">
+              <h2 class="textunderline position-relative py-2 mb-4">
                 Send Message Us
               </h2>
-              <form>
-                <input
-                  class="form-control"
-                  type="text"
-                  name="name"
-                  placeholder="Your Name"
-                />
-                <input
-                  class="form-control my-3"
-                  type="email"
-                  name="email"
-                  placeholder="Your Email"
-                />
-                <input
-                  class="form-control"
-                  type="text"
-                  name="subject"
-                  placeholder="Subject"
-                />
-                <textarea
-                  class="form-control my-3"
-                  name="message"
-                  placeholder="Message"
-                ></textarea>
+              <form id="contactForm" novalidate>
+                <div class="mb-3">
+                  <input
+                    class="form-control"
+                    type="text"
+                    name="name"
+                    id="name"
+                    placeholder="Your Name"
+                    required
+                    aria-label="Your Name"
+                  />
+                  <div class="invalid-feedback">Please provide your name.</div>
+                </div>
+                <div class="mb-3">
+                  <input
+                    class="form-control"
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="Your Email"
+                    required
+                    aria-label="Your Email"
+                  />
+                  <div class="invalid-feedback">
+                    Please provide a valid email address.
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <input
+                    class="form-control"
+                    type="text"
+                    name="subject"
+                    id="subject"
+                    placeholder="Subject"
+                    required
+                    aria-label="Subject"
+                  />
+                  <div class="invalid-feedback">Please provide a subject.</div>
+                </div>
+                <div class="mb-3">
+                  <textarea
+                    class="form-control"
+                    name="message"
+                    id="message"
+                    rows="5"
+                    placeholder="Message"
+                    required
+                    aria-label="Message"
+                  ></textarea>
+                  <div class="invalid-feedback">Please provide a message.</div>
+                </div>
                 <button
+                  type="submit"
                   class="btn bg-mblue px-4 py-2 text-white text-center rounded-pill mx-auto d-block mt-3"
                 >
                   Send Message
@@ -895,64 +1225,84 @@
               </form>
             </div>
           </div>
-          <div class="col-sm-6">
+          <div class="col-lg-6">
             <div>
-              <h2 class="textunderline position-relative py-2 mb-5">
-                Get in Touch
+              <h2 class="textunderline position-relative py-2 mb-4">
+                Contact Information
               </h2>
-              <p class="text-muted">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
-                dolorum dolorem soluta quidem expedita aperiam aliquid at. Totam
-                magni ipsum suscipit amet? Autem nemo esse laboriosam ratione
-                nobis mollitia inventore?
+              <p class="text-muted mb-4">
+                I'm always open to discussing new projects, creative ideas, or
+                opportunities to be part of your visions. Feel free to reach out
+                through any of the contact methods below.
               </p>
               <div class="details">
-                <div class="item">
+                <div class="item d-flex align-items-start mb-3">
                   <i
-                    class="fa-solid fa-location-dot fa-sm"
+                    class="fa-solid fa-location-dot fa-lg mt-1"
                     style="color: #0091ff"
+                    aria-hidden="true"
                   ></i>
-                  <span class="ms-2">329 WASHINGTON ST BOSTON, MA 02108</span>
+                  <span class="ms-3">Alexandria, Egypt</span>
                 </div>
-                <div class="item my-1">
+                <div class="item d-flex align-items-start mb-3">
                   <i
-                    class="fa-solid fa-mobile-screen-button fa-sm"
+                    class="fa-solid fa-mobile-screen-button fa-lg mt-1"
                     style="color: #005eff"
+                    aria-hidden="true"
                   ></i>
-                  <span class="ms-2"> (617) 557-0089</span>
+                  <a
+                    href="tel:+201285503661"
+                    class="ms-3 text-decoration-none text-dark"
+                    >(+02) 01285503661</a
+                  >
                 </div>
-                <div class="item">
+                <div class="item d-flex align-items-start mb-4">
                   <i
-                    class="fa-regular fa-envelope fa-sm"
+                    class="fa-regular fa-envelope fa-lg mt-1"
                     style="color: #005eff"
+                    aria-hidden="true"
                   ></i>
-                  <span class="ms-2">contact@example.com</span>
+                  <a
+                    href="mailto:es-ahmed.alaa2027@alexu.edu.eg"
+                    class="ms-3 text-decoration-none text-dark"
+                    >es-ahmed.alaa2027@alexu.edu.eg</a
+                  >
                 </div>
               </div>
-              <div class="social d-flex align-items-center gap-2 mt-3">
+              <div class="social d-flex align-items-center gap-3 mt-4">
                 <a
-                  href=""
-                  class="socialitem p-2 d-flex justify-content-center align-items-center border border-3 border-mblue rounded-circle text-decoration-none"
-                >
-                  <i class="fa-brands fa-facebook"></i>
-                </a>
-                <a
-                  href=""
-                  class="socialitem p-2 d-flex justify-content-center align-items-center border border-3 border-mblue rounded-circle text-decoration-none"
-                >
-                  <i class="fa-brands fa-instagram"></i>
-                </a>
-                <a
-                  href=""
-                  class="socialitem p-2 d-flex justify-content-center align-items-center border border-3 border-mblue rounded-circle text-decoration-none"
-                >
-                  <i class="fa-brands fa-twitter"></i>
-                </a>
-                <a
-                  href=""
-                  class="socialitem p-2 d-flex justify-content-center align-items-center border border-3 border-mblue rounded-circle text-decoration-none"
+                  href="https://www.linkedin.com/in/ahmed-alaa-elnaggar/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="socialitem p-3 d-flex justify-content-center align-items-center border border-3 border-mblue rounded-circle text-decoration-none"
+                  aria-label="LinkedIn Profile"
                 >
                   <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a
+                  href="https://github.com/AhmedAlaa8100"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="socialitem p-3 d-flex justify-content-center align-items-center border border-3 border-mblue rounded-circle text-decoration-none"
+                  aria-label="GitHub Profile"
+                >
+                  <i class="fa-brands fa-github"></i>
+                </a>
+                <a
+                  href="https://codeforces.com/profile/ahmedalaa8100"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="socialitem p-3 d-flex justify-content-center align-items-center border border-3 border-mblue rounded-circle text-decoration-none"
+                  aria-label="Codeforces Profile"
+                >
+                  <i class="fa-solid fa-code"></i>
+                </a>
+                <a
+                  href="mailto:es-ahmed.alaa2027@alexu.edu.eg"
+                  class="socialitem p-3 d-flex justify-content-center align-items-center border border-3 border-mblue rounded-circle text-decoration-none"
+                  aria-label="Send Email"
+                >
+                  <i class="fa-regular fa-envelope"></i>
                 </a>
               </div>
             </div>
@@ -961,9 +1311,130 @@
       </div>
     </section>
 
-    <footer class="py-3 text-center bg-primary text-white">
-      <p>© Copyright DevFolio. All Rights Reserved</p>
-      <p>Designed by BootstrapMade</p>
+    <!-- Footer -->
+    <footer class="py-4 text-center bg-primary text-white">
+      <div class="container">
+        <p class="mb-2">
+          © <span id="currentYear"></span> Ahmed Alaa. All Rights Reserved
+        </p>
+        <p class="mb-0">
+          Designed with <i class="fa-solid fa-heart text-danger"></i> by Ahmed
+          Alaa
+        </p>
+      </div>
     </footer>
+
+    <!-- Bootstrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Typed.js -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+    <!-- Custom Scripts -->
+    <script>
+      // Initialize Typed.js
+      document.addEventListener("DOMContentLoaded", function () {
+        const typedElement = document.querySelector(".typed");
+        if (typedElement) {
+          const items = typedElement
+            .getAttribute("data-typed-items")
+            .split(", ");
+          new Typed(".typed", {
+            strings: items,
+            typeSpeed: 100,
+            backSpeed: 100,
+            backDelay: 1500,
+            loop: true,
+          });
+        }
+
+        // Update current year in footer
+        const currentYear = new Date().getFullYear();
+        const yearElement = document.getElementById("currentYear");
+        if (yearElement) {
+          yearElement.textContent = currentYear;
+        }
+
+        // Form validation
+        const form = document.getElementById("contactForm");
+        if (form) {
+          form.addEventListener("submit", function (event) {
+            if (!form.checkValidity()) {
+              event.preventDefault();
+              event.stopPropagation();
+            } else {
+              event.preventDefault();
+              alert("Thank you for your message! I'll get back to you soon.");
+              form.reset();
+              form.classList.remove("was-validated");
+            }
+            form.classList.add("was-validated");
+          });
+        }
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+          anchor.addEventListener("click", function (e) {
+            const href = this.getAttribute("href");
+            if (href !== "#" && href.length > 1) {
+              e.preventDefault();
+              const target = document.querySelector(href);
+              if (target) {
+                const offsetTop = target.offsetTop - 70;
+                window.scrollTo({
+                  top: offsetTop,
+                  behavior: "smooth",
+                });
+
+                // Close mobile menu if open
+                const navbarCollapse =
+                  document.querySelector(".navbar-collapse");
+                if (
+                  navbarCollapse &&
+                  navbarCollapse.classList.contains("show")
+                ) {
+                  const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+                    toggle: false,
+                  });
+                  bsCollapse.hide();
+                }
+              }
+            }
+          });
+        });
+
+        // Update active nav link on scroll
+        const sections = document.querySelectorAll("section[id]");
+        const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
+
+        function updateActiveNavLink() {
+          let current = "";
+          sections.forEach((section) => {
+            const sectionTop = section.offsetTop - 100;
+            const sectionHeight = section.clientHeight;
+            if (
+              window.scrollY >= sectionTop &&
+              window.scrollY < sectionTop + sectionHeight
+            ) {
+              current = section.getAttribute("id");
+            }
+          });
+
+          navLinks.forEach((link) => {
+            link.classList.remove("active");
+            if (link.getAttribute("href") === `#${current}`) {
+              link.classList.add("active");
+            }
+          });
+        }
+
+        window.addEventListener("scroll", updateActiveNavLink);
+        updateActiveNavLink();
+      });
+    </script>
   </body>
 </html>
